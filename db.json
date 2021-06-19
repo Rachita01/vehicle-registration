@@ -1,0 +1,144 @@
+{
+    "vehicle":[
+        {   
+            "id":"1",
+            "vehicleNo":"DL12CB2345",
+            "ownerName":"John Doe",
+            "dateOfReg":"02.04.2019",
+            "statusOfReg":"Done"
+        },
+        {   
+            "id":"2",
+            "vehicleNo":"DL42EN0987",
+            "ownerName":"Pierce Marcus",
+            "dateOfReg":"05.06.2018",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"3",
+            "vehicleNo":"UP23CB9845",
+            "ownerName":"James Harrison",
+            "dateOfReg":"03.10.2015",
+            "statusOfReg":"Done" 
+        },
+        {   
+            "id":"4",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"5",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"6",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"7",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"8",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"9",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"10",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"11",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"12",
+            "vehicleNo":"DL42EN0987",
+            "ownerName":"Pierce Marcus",
+            "dateOfReg":"05.06.2018",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"13",
+            "vehicleNo":"UP23CB9845",
+            "ownerName":"James Harrison",
+            "dateOfReg":"03.10.2015",
+            "statusOfReg":"Done" 
+        },
+        {   
+            "id":"14",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"15",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"16",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"17",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"18",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"19",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        },
+        {   
+            "id":"20",
+            "vehicleNo":"MP67DE0925",
+            "ownerName":"Nick Ray",
+            "dateOfReg":"21.08.2016",
+            "statusOfReg":"Pending"
+        }
+    ]
+}
