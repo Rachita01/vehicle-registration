@@ -3,9 +3,9 @@ import {
   } from "../../../constants/constants";
   import { getVehicles } from "../../../lib/api/vehicles";
   
-  export const GetVehiclesAction = () => {
+  export const GetVehiclesAction = (page, rowsPerPage) => {
     return function action(dispatch) {
-      getVehicles()
+      getVehicles(page, rowsPerPage)
         .then((data) => {
           dispatch(GetVehiclesSuccessAction(data));
         })
