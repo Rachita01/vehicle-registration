@@ -5,8 +5,8 @@ import Button from '@material-ui/core/Button';
 export function ShowHideButton({ buttonName,onButtonClick,disabledButton }) {
 
   return (
-    <div style={{ margin: 10 }}>
-      <Button variant="contained" color="primary" onClick={()=>onButtonClick()} disabled={disabledButton}>
+    <div data-test="showHidebuttons" style={{ margin: 10 }}>
+      <Button data-test="buttonComponent" variant="contained" color="primary" onClick={()=>onButtonClick()} disabled={disabledButton}>
         {buttonName}
       </Button>
     </div>

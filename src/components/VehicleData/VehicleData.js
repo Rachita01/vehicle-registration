@@ -1,11 +1,12 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MaterialTable from 'material-table';
 import { GetVehiclesAction } from '../../redux/actions/Vehicles/GetVehiclesAction';
 import { GetVehiclesCountAction } from '../../redux/actions/Vehicles/GetVehiclesCountAction';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch} from 'react-redux'
 import { forwardRef } from 'react';
-import Pagination from '@material-ui/lab/Pagination'
-
+import Pagination from '@material-ui/lab/Pagination';
+import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import Check from '@material-ui/icons/Check';
@@ -42,40 +43,86 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
 };
 
+const CustomDatePicker = (props) => {
+  const [date, setDate] = useState(null);
+
+  return (
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <KeyboardDatePicker
+        margin="normal"
+        id="date-picker-dialog"
+        label="Date Filter"
+        format="dd.MM.yyyy"
+        clearable
+        value={date}
+        onChange={(event) => {
+          console.log("Date picker value: ", event);
+
+          setDate(event);
+          console.log(new Date(event).toLocaleDateString());
+          props.onFilterChanged(props.columnDef.tableData.id, event);
+        }}
+        KeyboardButtonProps={{
+          "aria-label": "change date"
+        }}
+      />
+    </MuiPickersUtilsProvider>
+  );
+};
 
 function VehicleData() {
-  const VehicleData = useSelector(state => state.vehicles);
+  const vehiclesData = useSelector(state => state.vehicles);
   const vehiclesCount = useSelector(state => state.vehiclesCount);
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
 
   const dispatch = useDispatch();
 
+
   const columns = [
     { title: "Status of Registration", field: "statusOfReg" },
     { title: "Vehicle Number", field: "vehicleNo" },
     { title: "Owner Name", field: "ownerName" },
-    { title: "Date of Registration", field: "dateOfReg" }
-  ]
+    {
+      title: "Date of Registration",
+      field: "dateOfReg",
+      render: rowData => displayDate(rowData.dateOfReg),
+      type: "date",
+      filterComponent: (props) => <CustomDatePicker {...props} />
+    }
+  ];
+
+  const displayDate = (date) => {
+    const newDate = new Date(date);
+    return `${newDate.getDate() < 10 ? '0' : ''}${newDate.getDate()}.${newDate.getMonth() < 9 ? '0' : ''}${newDate.getMonth() + 1}.${newDate.getFullYear()}`
+  }
+
   useEffect(() => {
     dispatch(GetVehiclesAction(page, rowsPerPage));
     dispatch(GetVehiclesCountAction());
   }, [dispatch, page]);
 
-  const handlePageChange = (event, pageNumber) => {
+  const handlePageChange = (_event, pageNumber) => {
     setPage(pageNumber);
   }
   return (
-    <div className="App">
-      <h1>Vehicle Registration Details</h1>
+    <div data-test="vehicleTable">
+      <h1 data-test="headerComponent">Vehicle Registration Details</h1>
       <MaterialTable
+        data-test="dataTable"
         title={" "}
-        data={VehicleData}
+        data={vehiclesData}
         columns={columns}
         icons={tableIcons}
-        options={{ paging: false }}
+        options={{ paging: false, filtering: true }}
+      // localization={{
+      //   body: {
+      //     dateTimePickerLocalization: enLocale
+      //   }
+      // }}
       />
-      <Pagination style={{display:'table', margin:'auto', paddingTop:20}} count={Math.ceil(vehiclesCount / rowsPerPage)} page={page} onChange={handlePageChange} />
+      <Pagination data-test="apiPagination" style={{ display: 'table', margin: 'auto', paddingTop: 20 }} count={Math.ceil(vehiclesCount / rowsPerPage)} page={page} onChange={handlePageChange} />
+
     </div>
   );
 }

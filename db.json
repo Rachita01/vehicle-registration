@@ -4,140 +4,140 @@
             "id":"1",
             "vehicleNo":"DL12CB2345",
             "ownerName":"John Doe",
-            "dateOfReg":"02.04.2019",
+            "dateOfReg":"2/4/2019",
             "statusOfReg":"Done"
         },
         {   
             "id":"2",
             "vehicleNo":"DL42EN0987",
             "ownerName":"Pierce Marcus",
-            "dateOfReg":"05.06.2018",
+            "dateOfReg":"6/5/2018",
             "statusOfReg":"Pending"
         },
         {   
             "id":"3",
             "vehicleNo":"UP23CB9845",
             "ownerName":"James Harrison",
-            "dateOfReg":"03.10.2015",
+            "dateOfReg":"3/13/2015",
             "statusOfReg":"Done" 
         },
         {   
             "id":"4",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
+            "dateOfReg":"4/17/2016",
             "statusOfReg":"Done"
         },
         {   
             "id":"5",
             "vehicleNo":"PN20DE4525",
             "ownerName":"Justin Hansen",
-            "dateOfReg":"30.05.2012",
+            "dateOfReg":"4/17/2016",
             "statusOfReg":"Done"
         },
         {   
             "id":"6",
             "vehicleNo":"HN50LP6022",
             "ownerName":"Benedict Johnson",
-            "dateOfReg":"20.06.2020",
+            "dateOfReg":"9/21/2020",
             "statusOfReg":"Pending"
         },
         {   
             "id":"7",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"07.08.2019",
+            "dateOfReg":"7/8/2019",
             "statusOfReg":"Done"
         },
         {   
             "id":"8",
             "vehicleNo":"DL40SA1172",
             "ownerName":"Baz Booth",
-            "dateOfReg":"21.08.2016",
+            "dateOfReg":"8/21/2016",
             "statusOfReg":"Pending"
         },
         {   
             "id":"9",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
+            "dateOfReg":"8/21/2016",
             "statusOfReg":"Pending"
         },
         {   
             "id":"10",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
+            "dateOfReg":"7/30/2018",
             "statusOfReg":"Pending"
         },
         {   
             "id":"11",
-            "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "vehicleNo":"WE45FG4545",
+            "ownerName":"Mike Yelsey",
+            "dateOfReg":"4/14/2020",
+            "statusOfReg":"Done"
         },
         {   
             "id":"12",
             "vehicleNo":"DL42EN0987",
             "ownerName":"Pierce Marcus",
-            "dateOfReg":"05.06.2018",
+            "dateOfReg":"9/15/2014",
             "statusOfReg":"Pending"
         },
         {   
             "id":"13",
             "vehicleNo":"UP23CB9845",
             "ownerName":"James Harrison",
-            "dateOfReg":"03.10.2015",
+            "dateOfReg":"6/10/2015",
             "statusOfReg":"Done" 
         },
         {   
             "id":"14",
             "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "ownerName":"Feder Ray",
+            "dateOfReg":"2/9/2016",
+            "statusOfReg":"Done"
         },
         {   
             "id":"15",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "dateOfReg":"10/26/2019",
+            "statusOfReg":"Done"
         },
         {   
             "id":"16",
             "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "ownerName":"Nick James",
+            "dateOfReg":"3/8/2018",
+            "statusOfReg":"Done"
         },
         {   
             "id":"17",
             "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "ownerName":"Jan Deter",
+            "dateOfReg":"6/28/2012",
+            "statusOfReg":"Done"
         },
         {   
             "id":"18",
-            "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
+            "vehicleNo":"UK67DE0375",
+            "ownerName":"Leena Wesdir",
+            "dateOfReg":"5/8/2021",
             "statusOfReg":"Pending"
         },
         {   
             "id":"19",
-            "vehicleNo":"MP67DE0925",
-            "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
-            "statusOfReg":"Pending"
+            "vehicleNo":"UP34RE0565",
+            "ownerName":"Gene Kinley",
+            "dateOfReg":"1/21/2016",
+            "statusOfReg":"Done"
         },
         {   
             "id":"20",
             "vehicleNo":"MP67DE0925",
             "ownerName":"Nick Ray",
-            "dateOfReg":"21.08.2016",
+            "dateOfReg":"3/6/2020",
             "statusOfReg":"Pending"
         }
     ]

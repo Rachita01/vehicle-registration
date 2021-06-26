@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       {showData && <VehicleData />}
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} >
+      <div className="buttons" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} >
         <ShowHideButton buttonName="Show" onButtonClick={onShowClick} disabledButton={showData}/>
         <ShowHideButton buttonName="Hide" onButtonClick={onHideClick} disabledButton={!showData}/>
       </div>
