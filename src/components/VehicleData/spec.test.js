@@ -1,41 +1,39 @@
-import {shallow} from 'enzyme';
+jest.mock('./../../lib/api/vehicles');
+import {configure,shallow} from 'enzyme';
 import React from 'react';
-import VehicleData from "./VehicleData";
-import {Provider} from 'react-redux';
-import configureMockStore from 'redux-mock-store';
+import { GetVehiclesSuccessAction } from '../../redux/actions/Vehicles/GetVehiclesAction';
+import { GetVehiclesCountSuccessAction } from '../../redux/actions/Vehicles/GetVehiclesCountAction';
+import Adapter from "enzyme-adapter-react-16";
+import * as ReactReduxHooks from "./../ReactReduxHooks/react-redux-hooks";
+import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import {findByTestAttribute} from './../../Utils';
-const mockStore = configureMockStore([thunk]);
-describe('Given Vehicle Data',() => {
-    const store = mockStore();
-    test("Then Material table should be rendered", () => {
-        const component = shallow(<Provider store={store}><VehicleData></VehicleData></Provider>).childAt(0);
-        console.log(component.debug());
-        const materialTable = findByTestAttribute(component,'dataTable').exists(); 
-        expect(materialTable).toBe(true);
-        
+import { initialState } from './../../constants/constants';
+import { GET_VEHICLES } from './../../constants/constants';
+import { GET_VEHICLES_COUNT } from './../../constants/constants';
+import * as API from './../../lib/api/vehicles';
+
+configure({adapter: new Adapter()});
+const mockStore = configureStore([thunk]);
+describe("Vehicle Data",() => {
+    
+    let store;
+    beforeEach(() => {
+        store = mockStore(initialState);
     });
-})
 
-// import React from 'react';
-// import {Provider} from 'react-redux'
-// import { mount, shallow } from 'enzyme'
-// import configureMockStore from 'redux-mock-store'
-// import thunk from 'redux-thunk';
-// import VehicleData from "./VehicleData";
+    test('Get vehicle data action',() => {
+        const vehicleList = 'vehicles';
+        const actual = GetVehiclesSuccessAction(vehicleList);
+        const expected = {type:GET_VEHICLES,payload:vehicleList};
+        expect(actual).toEqual(expected);
+    });
 
-// const mockStore = configureMockStore([thunk]);
+    test('Get vehicle count action',() => {
+        const vehicleCount = 'count';
+        const actual = GetVehiclesCountSuccessAction(vehicleCount);
+        const expected = {type:GET_VEHICLES_COUNT,payload:vehicleCount};
+        expect(actual).toEqual(expected);
+    });
 
-// describe('App', () => {
-//   it('should render a startup component if startup is not complete', () => {
-//     const store = mockStore({
-//       startup: { complete: false }
-//     });
-//     const wrapper = shallow(
-      
-//         <VehicleData />
-        
-//     )
-//     expect(wrapper.find('Startup').length).toEqual(1)
-//   })
-// })
+ 
+});

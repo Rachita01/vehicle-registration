@@ -9,7 +9,6 @@ export const createStoreWithMiddleware = applyMiddleware(...middlewares)(createS
 export const store = createStoreWithMiddleware(rootReducer);
 
 
-
 // import { createStore, applyMiddleware } from "redux";
 // import rootReducer from "./reducers";
 // import thunk from "redux-thunk";

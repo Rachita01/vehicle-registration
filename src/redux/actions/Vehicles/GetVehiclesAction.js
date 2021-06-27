@@ -15,7 +15,7 @@ import {
   export function GetVehiclesSuccessAction(vehicleList) {
     return {
       type: GET_VEHICLES,
-      payload: vehicleList,
+      payload: vehicleList
     };
   }
   

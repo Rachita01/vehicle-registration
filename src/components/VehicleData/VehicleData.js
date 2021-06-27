@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import MaterialTable from 'material-table';
 import { GetVehiclesAction } from '../../redux/actions/Vehicles/GetVehiclesAction';
 import { GetVehiclesCountAction } from '../../redux/actions/Vehicles/GetVehiclesCountAction';
-import { useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch} from './../ReactReduxHooks/react-redux-hooks';
 import { forwardRef } from 'react';
 import Pagination from '@material-ui/lab/Pagination';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -97,7 +97,7 @@ function VehicleData() {
     return `${newDate.getDate() < 10 ? '0' : ''}${newDate.getDate()}.${newDate.getMonth() < 9 ? '0' : ''}${newDate.getMonth() + 1}.${newDate.getFullYear()}`
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(GetVehiclesAction(page, rowsPerPage));
     dispatch(GetVehiclesCountAction());
   }, [dispatch, page]);

@@ -9,15 +9,15 @@ function App() {
   const showData = useSelector(state => state.showData);
   const dispatch = useDispatch();
   const onShowClick = () => {
-    dispatch(ShowDataAction());
+    dispatch(ShowDataAction()); //redux action
   }
 
   const onHideClick = () => {
-    dispatch(HideDataAction());
+    dispatch(HideDataAction()); //redux action
   }
 
   return (
-    <div className="App">
+    <div className="App" data-type="App">
       {showData && <VehicleData />}
       <div className="buttons" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} >
         <ShowHideButton buttonName="Show" onButtonClick={onShowClick} disabledButton={showData}/>
